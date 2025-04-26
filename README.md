@@ -26,14 +26,11 @@ cat /proc/cpuinfo | grep bugs
 
 Get Spectre Lab files from my github
 
-git clone https://github.com/bamamat1724/Spectre_Lab.git
-
 cd ~
 
-mkdir Spectre_Lab
+git clone https://github.com/bamamat1724/Spectre_Lab.git
 
 cd Spectre_Lab
-
 
 
 
