@@ -1,6 +1,8 @@
 # Spectre_Lab
 Lab for ECE 699 going through the spectre side channel attack
 
+
+
 # PREPARING THE ENVIRONMENT
 
 download VMWare
@@ -24,9 +26,16 @@ cat /proc/cpuinfo | grep bugs
 
 Get Spectre Lab files from my github
 
+git clone https://github.com/bamamat1724/Spectre_Lab.git
+
 cd ~
+
 mkdir Spectre_Lab
+
 cd Spectre_Lab
+
+
+
 
 # PROFILING
 
@@ -54,6 +63,9 @@ gcc ./spectre_appendix_c.c -o default_spectre
 
 ./default_spectre
 
+
+
+
 # CHANGING NUMBER OF RUNS
 
 Lets change to the spectre_development.c program which has been modified to better display more accurate score values. Be sure to update the threshold value in the spectre_development program.
@@ -63,6 +75,9 @@ gcc ./spectre_development.c -o modified_spectre
 ./modified_spectre
 
 Change the number of tries in the code and recompile. How does this effect the number of errors in the secret word?
+
+
+
 
 # BENCHMARKING SPECTRE
 
@@ -77,6 +92,9 @@ How many errors do you count for each of these options?
 
 The spectre paper claimed to be able to read 10kB/s with error rate of <0.01%. Does this roughly match what you are seeing, if not, how?
 
+
+
+
 # EXPLORING MEMORY
 
 Use the arbitrary address program to read the addresses before and after the hidden string. It has two additional input arguments for a memory location and a number of bytes to read. Since most memory locations have 0x00, this program has been modified to not display values of 0x00 so that the text is easier to see without as much searching. Remember to change the threshold and number of tries!
@@ -88,6 +106,9 @@ gcc ./spectre_development_mem_dump.c -o mem_dump
 Do you see any other strings that you recognize? What is the lowest address that you can find readable text and what does it say? (Hint: No need to search before 0xffffffffffffbb00)
 
 Open the executable file you just ran in a text editor (e.g. mem_dump). What is the first word you see in the text editor? What conclusions can you make about the data being read with the spectre attack based on this?
+
+
+
 
 # COMPARING MEMORY TO EXECUTABLE
 
